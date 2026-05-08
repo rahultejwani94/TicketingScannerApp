@@ -136,6 +136,7 @@ export default function AllTicketsScreen() {
           onChangeText={handleSearch}
         />
 
+<View style={{ marginBottom: 10 }}>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -161,9 +162,11 @@ export default function AllTicketsScreen() {
             </TouchableOpacity>
           )}
         />
+        </View>
 
         {/* LIST */}
         <FlatList
+          style={{ flex: 1 }}
           data={Object.keys(groupedTickets)}
           keyExtractor={(item) => item}
           refreshControl={
@@ -275,8 +278,8 @@ const styles = StyleSheet.create({
 
   filterRow: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 10,
+    alignItems: "center",
+    gap: 8,
   },
 
   chip: {
