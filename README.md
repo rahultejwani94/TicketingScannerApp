@@ -1,50 +1,104 @@
-# Welcome to your Expo app 👋
+# Ticket Scanner Admin App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native Expo application designed for administering ticket scanning operations. This admin app provides a user-friendly interface for managing tickets, approving entries, and monitoring dashboard metrics.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Dashboard**: Overview of key metrics and statistics for ticket operations.
+- **All Tickets**: View and manage all scanned tickets in a comprehensive list.
+- **Approve Tickets**: Review and approve pending ticket entries.
+- **Camera Integration**: Utilize device camera for scanning tickets (via expo-camera).
+- **Responsive Design**: Built with Expo Router for file-based routing and responsive UI components.
+
+## Technologies Used
+
+- **React Native**: Framework for building native apps using React.
+- **Expo**: Platform for universal React applications.
+- **Expo Router**: File-based routing for navigation.
+- **TypeScript**: Typed JavaScript for better development experience.
+- **Expo Camera**: For camera functionality in ticket scanning.
+
+## Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone <repository-url>
+   cd admin-app
+   ```
+
+2. **Install dependencies**:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Set up environment variables**:
+   - Copy `.env.example` to `.env` and configure your API endpoints and other settings.
+
+## Usage
+
+1. **Start the development server**:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+2. **Run on specific platforms**:
+   - **Android**: `npm run android`
+   - **iOS**: `npm run ios`
+   - **Web**: `npm run web`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+3. **Build for production**:
+   - Use Expo Application Services (EAS) for building:
+     ```bash
+     npx eas build --platform android
+     npx eas build --platform ios
+     ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+admin-app/
+├── app/                    # Main application screens
+│   ├── _layout.tsx        # Root layout
+│   ├── modal.tsx          # Modal component
+│   └── (tabs)/            # Tab-based navigation
+│       ├── _layout.tsx
+│       ├── index.tsx      # Home/Dashboard
+│       ├── dashboard.tsx  # Dashboard screen
+│       ├── all_tickets.tsx # All tickets view
+│       └── approve.tsx    # Approve tickets screen
+├── assets/                # Static assets (images, icons)
+├── components/            # Reusable UI components
+├── constants/             # App constants and themes
+├── hooks/                 # Custom React hooks
+├── services/              # API services
+│   └── api.ts             # API configuration
+├── scripts/               # Utility scripts
+└── package.json           # Dependencies and scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## API Integration
 
-## Learn more
+The app integrates with backend services via the `services/api.ts` file. Ensure your API endpoints are configured in the environment variables.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature/your-feature`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature`.
+5. Open a pull request.
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Support
+
+For support, please contact the development team or open an issue in the repository.
+
+---
+
+Built with ❤️ using [Expo](https://expo.dev) and [React Native](https://reactnative.dev).

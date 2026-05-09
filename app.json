@@ -37,9 +37,8 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/ticket-scanner-splash.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
+          "image": "./assets/images/ticket-scanner-splash.png",        
+          "resizeMode": "cover",
           "backgroundColor": "#ffffff",
           "dark": {
             "backgroundColor": "#000000"
